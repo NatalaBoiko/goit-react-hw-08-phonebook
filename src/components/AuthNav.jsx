@@ -1,13 +1,22 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import s from '../Styles.module.css';
 
 export default function AuthNav() {
   return (
     <div>
-      <p>Registration</p>
-      <p>Log in</p>
-      {/* <NavLink to="/register">Регистрация</NavLink> */}
-      {/* <NavLink to="/login">Логин</NavLink> */}
+      <NavLink
+        className={({ isActive }) => (isActive ? s.active : s.nav__link)}
+        to="/register"
+      >
+        Registration
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? s.active : s.nav__link)}
+        to="/login"
+      >
+        Log in
+      </NavLink>
     </div>
   );
 }

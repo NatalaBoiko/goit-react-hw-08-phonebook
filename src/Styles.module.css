@@ -1,0 +1,33 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  width: 100vw;
+  background-color: var(--bg__color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px var(--glob-padding);
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.nav__link {
+  font-weight: 700;
+  font-size: 25px;
+  transition-duration: 800ms;
+  color: var(--navlink__color);
+  margin-right: 10px;
+}
+.nav__link:not(:last-child) {
+  margin-right: 10px;
+}
+.nav__link:hover,
+.active {
+  margin-right: 10px;
+
+  font-size: 30px;
+  color: var(--navlink__hover);
+  font-weight: 800;
+  transform: scale(1.1);
+}

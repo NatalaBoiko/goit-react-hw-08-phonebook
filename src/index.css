@@ -2,9 +2,15 @@
 /* bring in normalize.css styles */
 
 :root {
-  --bg-color: rgba(178, 146, 171, 0.742);
+  --bg__color: rgba(178, 146, 171, 0.742);
+  --navlink__color: rgba(241, 231, 239, 0.976);
+  /* --navlink__color: #ffffff57; */
+
+  --navlink__hover: #ececf1;
+
   --btn-red: rgba(255, 0, 0, 0.2);
   --btn-green: rgba(79, 183, 93, 0.2);
+  --glob-padding: 100px;
 }
 
 *,
@@ -33,10 +39,10 @@ li {
 }
 a {
   text-decoration: none;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 button {
