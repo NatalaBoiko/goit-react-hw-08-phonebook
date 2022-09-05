@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/810.6b08a227.chunk.js","mappings":"oKAMA,UANc,kBACZ,0BACE,mCAFU,C","sources":["views/Login.jsx"],"sourcesContent":["const Login = () => (\n  <div>\n    <h2>Login</h2>\n  </div>\n);\n\nexport default Login;\n"],"names":[],"sourceRoot":""}
