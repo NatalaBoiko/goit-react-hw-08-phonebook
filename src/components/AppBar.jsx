@@ -8,7 +8,7 @@ export default function AppBar() {
   return (
     <header className={s.header}>
       <Navigation />
-      {/* <UserMenu /> */}
+      <UserMenu />
       <AuthNav />
       {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
     </header>
