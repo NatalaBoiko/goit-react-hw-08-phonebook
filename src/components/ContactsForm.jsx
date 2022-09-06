@@ -2,7 +2,7 @@ import s from '../Styles.module.css';
 
 export const ContacstForm = () => {
   return (
-    <div className={s.view__container}>
+    <div className={s.cont__container}>
       <form className={s.form__container}>
         <input type="text" name="name" placeholder="Name" />
         <input type="number" name="number" placeholder="phone number" />
