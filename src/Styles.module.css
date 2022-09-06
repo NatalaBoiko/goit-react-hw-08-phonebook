@@ -56,7 +56,8 @@
   color: var(--navlink__color);
   margin-right: 20px;
 }
-.user__btn {
+.user__btn,
+.form__btn {
   font-size: 15px;
   font-weight: 700;
   color: rgba(51, 51, 51, 0.8);
@@ -72,11 +73,15 @@
   transform: scale(1.1);
   background-color: var(--btn__red);
 }
+.form__btn:hover {
+  transform: scale(1.1);
+  background-color: var(--btn__green);
+}
 
 .home__linc {
   font-weight: 800;
   font-size: 30px;
-  transition-duration: 800ms;
+  transition-duration: var(--transition__duration);
   color: var(--bg__color);
 }
 .home__linc:hover,
@@ -104,6 +109,7 @@
   font-weight: 800;
   color: var(--secondary__color);
 }
+
 .please {
   color: var(--secondary__light);
   font-size: 20px;
@@ -115,4 +121,28 @@
   display: flex;
   align-items: center;
   column-gap: 20px;
+}
+
+.form__container {
+  display: flex;
+  row-gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+input {
+  font-size: 20px;
+  border: transparent;
+  border-radius: 5px;
+  box-shadow: var(--btn__shadow);
+  color: var(--secondary__light);
+  /* border-bottom: 1px solid var(--secondary__color); */
+  padding: 5px;
+  transition: var(--transition__duration);
+}
+input:hover,
+input:focus {
+  border: 1px solid var(--secondary__light);
+  width: 100%;
+  transform: scale(1.1);
 }
