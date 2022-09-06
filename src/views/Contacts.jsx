@@ -14,7 +14,7 @@ const contacts = [
 const Contacts = () => {
   return (
     <div className={s.view__container}>
-      {/* <h2 className={s.home__title}>Contacts</h2> */}
+      <h2 className={s.home__title}>Contacts</h2>
       <ContacstForm />
       <Filter />
       {contacts ? <ContactsList /> : <Loader />}
