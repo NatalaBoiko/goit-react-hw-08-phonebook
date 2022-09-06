@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import s from '../Styles.module.css';
 
 const HomeView = () => (
-  <div className={s.container}>
+  <div className={s.view__container}>
     <h1 className={s.home__title}>Welcome to the phonebook </h1>
     <p className={s.please}>please</p>
     <div className={s.please__container}>

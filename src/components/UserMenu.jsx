@@ -5,7 +5,9 @@ export default function UserMenu() {
       <p className={s.user__link}>Welcome, </p>
       <p className={s.user__link}>' '</p>
       {/* <p className={s.user__smile}>😃</p> */}
-      <button className={s.user__btn}>Log out</button>
+      <button className={s.user__btn} type="submit">
+        Log out
+      </button>
     </div>
   );
 }

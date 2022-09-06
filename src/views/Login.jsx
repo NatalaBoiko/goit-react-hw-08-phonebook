@@ -7,7 +7,7 @@ const Login = () => {
       <form className={s.form__container}>
         <input type="email" name="email" placeholder="example@email.com" />
         <input type="password" name="password" placeholder="password" />
-        <button type="button " className={s.form__btn}>
+        <button type="submit " className={s.form__btn}>
           Log in
         </button>
       </form>
