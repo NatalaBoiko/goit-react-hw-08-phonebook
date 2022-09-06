@@ -1,6 +1,8 @@
+import s from '../Styles.module.css';
+
 const Register = () => (
-  <div>
-    <h2>Register</h2>
+  <div className={s.view__container}>
+    <h2>Registration</h2>
   </div>
 );
 

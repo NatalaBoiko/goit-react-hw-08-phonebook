@@ -4,13 +4,15 @@
 :root {
   --bg__color: rgba(178, 146, 171, 0.742);
   --navlink__color: rgba(241, 231, 239, 0.976);
-  /* --navlink__color: #ffffff57; */
+  --secondary__color: rgba(51, 51, 51, 0.8);
+  --secondary__light: rgba(51, 51, 51, 0.584);
+  --glob-padding: 100px;
 
   --navlink__hover: #ececf1;
 
-  --btn-red: rgba(255, 0, 0, 0.2);
+  --btn__red: rgba(255, 0, 0, 0.2);
   --btn-green: rgba(79, 183, 93, 0.2);
-  --glob-padding: 100px;
+  --btn__shadow: 0 0 2px #333;
 }
 
 *,
