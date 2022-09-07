@@ -25,13 +25,15 @@ zapoznania się z ustawieniami dodatkowych opcji
 
 ## Deployment
 
-Aby skonfigurować wdrożenie projektu, należy wykonać kilka dodatkowych kroków
-w celu skonfigurowania repozytorium. Przejdź do zakładki `Settings` i w podsekcji
+Aby skonfigurować wdrożenie projektu, należy wykonać kilka dodatkowych kroków w
+celu skonfigurowania repozytorium. Przejdź do zakładki `Settings` i w podsekcji
 `Actions` wybierz wybierz pozycję `General`.
 
 ![GitHub actions settings](./assets/actions-config-step-1.png)
 
-Przewiń stronę w dół do ostatniej sekcji, a następnie wybierz opcje tak jak pokazano poniżej i kliknij `Save`. Bez tych ustawień zespół nie będzie miał uprawnień, aby zautomatyzować proces wdrażania.
+Przewiń stronę w dół do ostatniej sekcji, a następnie wybierz opcje tak jak
+pokazano poniżej i kliknij `Save`. Bez tych ustawień zespół nie będzie miał
+uprawnień, aby zautomatyzować proces wdrażania.
 
 ![GitHub actions settings](./assets/actions-config-step-2.png)
 
@@ -103,4 +105,4 @@ końcu łańcucha jest obowiązkowy.
    zainicjowany i przechodzi pracę lintera oraz zbudowanie przed deploymentem.
 3. Jeżeli wszystkie kroki zakończyły się sukcesem, zbudowana wersja produkcyjna
    plików projektu wysyłana jest do gałęzi `gh-pages`. W przeciwnym razie, w
-   logu wykonania skryptu zostanie wskazane z czym jest problem.
+   logu wykonania skryptu zostanie wskazane z czym jest problem. ))) 000
