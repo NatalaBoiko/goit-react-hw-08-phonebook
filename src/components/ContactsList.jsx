@@ -5,7 +5,7 @@ export const ContactsList = ({ contacts }) => {
     <div>
       <ul className={s.items__container}>
         {contacts &&
-          filteredContacts.map(({ id, name, number }) => {
+          contacts.map(({ id, name, number }) => {
             return (
               <li className={s.item} key={id}>
                 <h3 className={s.item__name}>{name}:</h3>
