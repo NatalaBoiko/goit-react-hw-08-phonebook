@@ -6,7 +6,6 @@ export const ContacstForm = () => {
       <form className={s.form__container}>
         <input type="text" name="name" placeholder="Name" />
         <input type="number" name="number" placeholder="phone number" />
-        <input type="password" name="password" placeholder="password" />
         <button type="submit " className={s.form__btn}>
           Add contact
         </button>

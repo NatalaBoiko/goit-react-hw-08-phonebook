@@ -1,19 +1,23 @@
-import { Loader } from '../components/Loader/Loader';
 import s from '../Styles.module.css';
 import { ContacstForm } from '../components/ContactsForm';
 import { Filter } from '../components/Filter';
 import { ContactsList } from '../components/ContactsList';
-// import { useContacts } from '../components/hooks';
-// import { useDispatch } from 'react-redux';
+import { Loader } from '../components/Loader/Loader';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useContacts } from '../components/hooks';
+import { contactsOperations } from '../redux/contacts/contactsOperations';
 
-const contacts = [
-  { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
-  { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
-  { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
-  { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
-];
+// const contacts = [];
 
 const Contacts = () => {
+  const dispatch = useDispatch();
+  const { contacts } = useContacts();
+
+  useEffect(() => {
+    dispatch(contactsOperations.getContacts());
+  }, [dispatch]);
+
   return (
     <div className={s.view__container}>
       <h2 className={s.home__title}>Contacts</h2>

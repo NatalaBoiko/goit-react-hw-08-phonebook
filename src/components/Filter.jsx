@@ -10,7 +10,7 @@ export const Filter = () => {
         type="text"
         name="filter"
         value={filter}
-        placeholder="Find contacts by name"
+        placeholder="Find contact by name"
         onChange={e => setFilter(e.target.value)}
       />
     </div>
