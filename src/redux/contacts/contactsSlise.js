@@ -14,10 +14,11 @@ const contactsSlice = createSlice({
     error: null,
   },
   reducers: {
-    setFilter(state, { payload }) {
-      return { filter: payload, ...state };
+    changeFilter(state, { payload }) {
+      return { ...state, filter: payload };
     },
   },
 });
 
+export const { changeFilter } = contactsSlice.actions;
 export const contactsReduser = contactsSlice.reducer;

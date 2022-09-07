@@ -3,6 +3,8 @@ import s from '../Styles.module.css';
 import { ContacstForm } from '../components/ContactsForm';
 import { Filter } from '../components/Filter';
 import { ContactsList } from '../components/ContactsList';
+import { useContacts } from '../components/hooks';
+// import { useDispatch } from 'react-redux';
 
 const contacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -12,11 +14,21 @@ const contacts = [
 ];
 
 const Contacts = () => {
+  // const dispatch = useDispatch();
+
+  const { setFilter } = useContacts();
+
+  const handleChangeFilter = e => {
+    const { value } = e.target;
+    console.log(value);
+    setFilter(value);
+  };
+
   return (
     <div className={s.view__container}>
       <h2 className={s.home__title}>Contacts</h2>
       <ContacstForm />
-      <Filter />
+      <Filter onChange={handleChangeFilter} />
       {contacts ? <ContactsList /> : <Loader />}
       {/* <Loader /> */}
     </div>
