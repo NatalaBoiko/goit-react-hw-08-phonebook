@@ -1,10 +1,4 @@
 import s from '../Styles.module.css';
-import { Loader } from '../components/Loader/Loader';
-
-import { useContacts } from '../components/hooks';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { contactsOperations } from '../redux/contacts/contactsOperations';
 
 export const ContactsList = ({ contacts }) => {
   return (

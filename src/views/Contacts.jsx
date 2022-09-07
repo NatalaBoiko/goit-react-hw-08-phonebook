@@ -33,7 +33,6 @@ const Contacts = () => {
       <ContacstForm />
       <Filter />
       {isLoaging ? <Loader /> : <ContactsList contacts={filteredContacts} />}
-      {/* <ContactsList /> */}
     </div>
   );
 };
