@@ -13,7 +13,7 @@ export const Filter = () => {
       <input
         type="text"
         name="filter"
-        // value={value}
+        value={filter}
         placeholder="Find contacts by name"
         onChange={e => dispatch(changeFilter(e.target.value))}
       />
