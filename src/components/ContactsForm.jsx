@@ -2,7 +2,7 @@ import s from '../Styles.module.css';
 // import { nanoid } from 'nanoid';
 
 import { useState } from 'react';
-import { useContacts } from '../components/hooks';
+import { useContacts } from './Hooks/hooks';
 import { infoToast, successToast } from './Toasts';
 
 export const ContacstForm = () => {

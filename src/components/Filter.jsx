@@ -1,5 +1,5 @@
 import s from '../Styles.module.css';
-import { useContacts } from '../components/hooks';
+import { useContacts } from './Hooks/hooks';
 
 export const Filter = () => {
   const { filter, setFilter } = useContacts();
