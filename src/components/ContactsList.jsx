@@ -44,7 +44,7 @@ export const ContactsList = () => {
                     type="button"
                     onClick={() => {
                       deleteContact(id);
-                      deleteToast(`${name} and ${number} is deleted`);
+                      deleteToast(`${name} tel:${number} is deleted`);
                       setFilter('');
                     }}
                   >
