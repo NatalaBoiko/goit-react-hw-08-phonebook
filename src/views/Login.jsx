@@ -1,10 +1,12 @@
 import s from '../Styles.module.css';
 import { useState } from 'react';
+import authOperations from '../redux/auth/auth-operations';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // console.log(email, password);
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -18,11 +20,11 @@ const Login = () => {
       default:
         break;
     }
-    console.log(name, value);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
+    dispatch(authOperations.logIn({ email, password }));
 
     setEmail('');
     setPassword('');

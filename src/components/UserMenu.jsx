@@ -1,4 +1,7 @@
 import s from '../Styles.module.css';
+// import { useSelector, useDispatch } from 'react-redux';
+// import authOperations from '../redux/auth/auth-operations';
+// import authSelectors from '../redux/auth/auth-selectors';
 export default function UserMenu() {
   return (
     <div className={s.user__container}>
