@@ -6,7 +6,9 @@ import { useContacts } from '../components/hooks';
 // import { infoToast, successToast } from './Toasts';
 
 export const ContacstForm = () => {
-  const { contacts, isLoaging, addContact } = useContacts();
+  // const { contacts, isLoaging, addContact } = useContacts();
+  const { contacts, addContact } = useContacts();
+
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
