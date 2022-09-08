@@ -3,7 +3,7 @@ import s from '../Styles.module.css';
 
 import { useState } from 'react';
 import { useContacts } from '../components/hooks';
-import { infoToast, successToast } from './Toasts';
+// import { infoToast, successToast } from './Toasts';
 
 export const ContacstForm = () => {
   const { contacts, isLoaging, addContact } = useContacts();
@@ -39,9 +39,9 @@ export const ContacstForm = () => {
         contact.number === number
     );
     enterContacts
-      ? infoToast(`${name} or ${number} is already in contacts`)
+      ? alert(`${name} or ${number} is already in contacts`)
       : addContact({ name, number });
-    !enterContacts && successToast('the contact is in the list  😃');
+    !enterContacts && alert('the contact is in the list  😃');
     setName('');
     setNumber('');
   };
