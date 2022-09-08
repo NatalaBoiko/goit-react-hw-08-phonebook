@@ -19,7 +19,7 @@ const contactsSlice = createSlice({
       ...state,
       isLoaging: true,
     }),
-    [contactsOperations.getContacts.fulfilled](state, { payload }) {
+    [contactsOperations.getContacts.fulfilled]: (state, { payload }) => {
       return { ...state, items: payload, isLoaging: false };
     },
     [contactsOperations.getContacts.rejected]: (state, { payload }) => ({

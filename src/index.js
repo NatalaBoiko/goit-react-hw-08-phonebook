@@ -1,4 +1,6 @@
 import React from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 // import { persistor } from './redux/store';

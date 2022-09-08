@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -11,12 +12,15 @@ const Login = lazy(() => import('../views/Login'));
 const Contacts = lazy(() => import('../views/Contacts'));
 
 export const App = () => (
-  <Routes>
-    <Route path="/" element={<Layout />}>
-      <Route index element={<HomeView />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/contacts" element={<Contacts />} />
-    </Route>
-  </Routes>
+  <>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomeView />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Route>
+    </Routes>
+    <ToastContainer />
+  </>
 );
