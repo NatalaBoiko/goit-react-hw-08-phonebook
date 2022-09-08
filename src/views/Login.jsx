@@ -4,6 +4,8 @@ import { useState } from 'react';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // console.log(email, password);
+
   const handleChange = event => {
     const { name, value } = event.target;
     switch (name) {
@@ -33,12 +35,14 @@ const Login = () => {
         <input
           type="email"
           name="email"
+          value={email}
           placeholder="example@email.com"
           onChange={handleChange}
         />
         <input
           type="password"
           name="password"
+          value={password}
           placeholder="password"
           onChange={handleChange}
         />
