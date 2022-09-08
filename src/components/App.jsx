@@ -1,10 +1,10 @@
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
-
 import { Route, Routes } from 'react-router-dom';
-
 import { lazy } from 'react';
 import { Layout } from './Layout';
+// import { PrivateRoute } from './Routs/PrivateRoute';
+// import { PublicRoute } from './Routs/PublicRoute';
 
 const HomeView = lazy(() => import('../views/Home'));
 const Register = lazy(() => import('../views/Register'));
