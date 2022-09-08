@@ -1,5 +1,5 @@
 import s from '../Styles.module.css';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 
 import { useState } from 'react';
 import { useContacts } from '../components/hooks';
@@ -28,11 +28,11 @@ export const ContacstForm = () => {
   const handleSubmit = async event => {
     event.preventDefault();
 
-    const contact = {
-      id: nanoid(),
-      name,
-      number,
-    };
+    // const contact = {
+    //   id: nanoid(),
+    //   name,
+    //   number,
+    // };
     const enterContacts = contacts.some(
       contact =>
         (contact.name === name.toLowerCase() && contact.number === number) ||
