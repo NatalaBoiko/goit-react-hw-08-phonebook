@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-08-phonebook-r",
+  "name": "goit-react-hw-08-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://NatalaBoiko.github.io/goit-react-hw-08-phonebook-r/",
+  "homepage": "https://NatalaBoiko.github.io/goit-react-hw-08-phonebook/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.3",
