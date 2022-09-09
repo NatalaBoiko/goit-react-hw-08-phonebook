@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/129.bf7aebc5.chunk.js","mappings":"0KAMA,UAJiB,WACAA,EAAAA,EAAAA,WAChB,C","sources":["views/NotFound.jsx"],"sourcesContent":["import s from '../Styles.module.css';\n\nconst NotFound = () => {\n  <h2 className={s.home__title}>The page is not found 😎</h2>;\n};\n\nexport default NotFound;\n"],"names":["s"],"sourceRoot":""}
