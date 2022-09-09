@@ -2,7 +2,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { PrivateRoute } from './Routs/PrivateRoute';
 import { PublicRoute } from './Routs/PublicRoute';
 // import authSelectors from '../redux/auth/auth-selectors';
