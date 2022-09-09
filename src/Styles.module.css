@@ -1,4 +1,3 @@
-/* header */
 .container {
   display: flex;
   flex-direction: column;
@@ -9,6 +8,7 @@
 .user__container {
   display: flex;
   align-items: center;
+  /* background-image: {bg}; */
 }
 
 .view__container {
@@ -16,7 +16,7 @@
   row-gap: 15px;
   flex-direction: column;
   /* align-items: center; */
-  padding: 30px var(--glob-padding);
+  padding: 100px var(--glob-padding);
 }
 
 .please__container {
@@ -55,15 +55,14 @@
   left: 0;
   z-index: 1100;
   width: 100vw;
-  height: 100px;
   background-color: var(--bg__color);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 10px var(--glob-padding);
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  padding: 30px var(--glob-padding);
+  box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 75%);
+  /* 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); */
 }
 
 .nav__link {
