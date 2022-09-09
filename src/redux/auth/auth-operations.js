@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { infoToast } from '../../components/Toasts';
+
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
@@ -19,6 +21,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
     return data;
   } catch (error) {
     console.log(error.message);
+    infoToast('The user is alredy registered');
   }
 });
 
@@ -29,6 +32,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
     return data;
   } catch (error) {
     console.log(error.message);
+    infoToast('Incorrect login or password');
   }
 });
 
@@ -47,7 +51,7 @@ const fetchCurrentUser = createAsyncThunk(
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
     if (persistedToken === null) {
-      console.log('Токена нет, уходим из fetchCurrentUser');
+      // console.log('Токена нет, уходим из fetchCurrentUser');
       return thunkAPI.rejectWithValue();
     }
     token.set(persistedToken);
