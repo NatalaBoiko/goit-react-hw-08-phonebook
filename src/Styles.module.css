@@ -17,6 +17,10 @@
   flex-direction: column;
   /* align-items: center; */
   padding: 100px var(--glob-padding);
+  background-image: url(./components/images/img3.jpeg);
+  /* background-position: 50% 50%; */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .please__container {
