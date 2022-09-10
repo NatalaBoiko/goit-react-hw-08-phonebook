@@ -53,6 +53,10 @@ export const App = () => {
             }
           />
 
+          {/* <PrivateRoute path="/contacts">
+            <Contacts />
+          </PrivateRoute> */}
+
           <Route
             path="/contacts"
             element={
