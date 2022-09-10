@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import authOperations from '../redux/auth/auth-operations';
-// import { PrivateRoute } from './Routs/PrivateRoute';
+// import PrivateRoute from './Routs/PrivateRoute';
 // import { PublicRoute } from './Routs/PublicRoute';
 
 import { Layout } from './Layout';

@@ -8,3 +8,5 @@ export const PrivateRoute = ({ children }) => {
 
   return isLoggedIn ? children : <Navigate to="/login" replace />;
 };
+
+export default PrivateRoute;
