@@ -64,6 +64,7 @@ const fetchCurrentUser = createAsyncThunk(
       return data;
     } catch (error) {
       console.log(error.message);
+      return thunkAPI.rejectWithValue();
     }
   }
 );
