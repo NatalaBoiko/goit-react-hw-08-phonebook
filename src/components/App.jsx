@@ -2,9 +2,12 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
+
 import { useDispatch } from 'react-redux';
-import { PrivateRoute } from './Routs/PrivateRoute';
-import { PublicRoute } from './Routs/PublicRoute';
+// import { useDispatch, useSelector } from 'react-redux';
+
+// import { PrivateRoute } from './Routs/PrivateRoute';
+// import { PublicRoute } from './Routs/PublicRoute';
 // import authSelectors from '../redux/auth/auth-selectors';
 import authOperations from '../redux/auth/auth-operations';
 import { Layout } from './Layout';
@@ -23,42 +26,43 @@ export const App = () => {
   }, [dispatch]);
 
   return (
+    // !getCurrentUser && (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route
             index
             element={
-              <PublicRoute>
-                <HomeView />
-              </PublicRoute>
+              // <PublicRoute>
+              <HomeView />
+              // </PublicRoute>
             }
           />
 
           <Route
             path="/register"
             element={
-              <PublicRoute restricted>
-                <Register />
-              </PublicRoute>
+              // <PublicRoute restricted>
+              <Register />
+              // </PublicRoute>
             }
           />
 
           <Route
             path="/login"
             element={
-              <PublicRoute restricted>
-                <Login />
-              </PublicRoute>
+              // <PublicRoute restricted>
+              <Login />
+              // </PublicRoute>
             }
           />
 
           <Route
             path="/contacts"
             element={
-              <PrivateRoute>
-                <Contacts />
-              </PrivateRoute>
+              // <PrivateRoute>
+              <Contacts />
+              // </PrivateRoute>
             }
           />
           <Route path="*" element={<NotFound />} />
@@ -66,5 +70,6 @@ export const App = () => {
       </Routes>
       <ToastContainer />
     </>
+    // )
   );
 };

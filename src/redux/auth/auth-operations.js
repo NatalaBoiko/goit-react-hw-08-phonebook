@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { infoToast } from '../../components/Toasts';
-
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
@@ -18,6 +17,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
   try {
     const { data } = await axios.post('/users/signup', credentials);
     token.set(data.token);
+    console.log(data);
     return data;
   } catch (error) {
     console.log(error.message);
@@ -48,19 +48,21 @@ const logOut = createAsyncThunk('auth/logout', async () => {
 const fetchCurrentUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
+    console.log(thunkAPI.getState());
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    if (persistedToken === null) {
-      // console.log('Токена нет, уходим из fetchCurrentUser');
-      return thunkAPI.rejectWithValue();
+    console.log(persistedToken);
+    if (!persistedToken) {
+      console.log('!persistedToken');
+      return;
     }
     token.set(persistedToken);
     try {
       const { data } = await axios.get('/users/current');
+      console.log(data);
       return data;
     } catch (error) {
-      console.log(error);
-      return error.message;
+      console.log(error.message);
     }
   }
 );
@@ -72,3 +74,23 @@ const authOperations = {
   fetchCurrentUser,
 };
 export default authOperations;
+
+// const fetchCurrentUser = createAsyncThunk(
+//   'auth/refresh',
+//   async (_, thunkAPI) => {
+//     const state = thunkAPI.getState();
+//     const persistedToken = state.auth.token;
+//     if (persistedToken === null) {
+//       // console.log('Токена нет, уходим из fetchCurrentUser');
+//       return thunkAPI.rejectWithValue();
+//     }
+//     token.set(persistedToken);
+//     try {
+//       const { data } = await axios.get('/users/current');
+//       return data;
+//     } catch (error) {
+//       console.log(error);
+//       return error.message;
+//     }
+//   }
+// );
