@@ -6,8 +6,8 @@ import { useDispatch } from 'react-redux';
 import authOperations from '../redux/auth/auth-operations';
 // import authSelectors from '../redux/auth/auth-operations';
 
-// import PrivateRoute from './Routs/PrivateRoute';
-// import { PublicRoute } from './Routs/PublicRoute';
+import PrivateRoute from './Routs/PrivateRoute';
+import PublicRoute from './Routs/PublicRoute';
 
 import { Layout } from './Layout';
 
@@ -31,40 +31,36 @@ export const App = () => {
           <Route
             index
             element={
-              // <PublicRoute>
-              <HomeView />
-              // </PublicRoute>
+              <PublicRoute>
+                <HomeView />
+              </PublicRoute>
             }
           />
 
           <Route
             path="/register"
             element={
-              // <PublicRoute restricted>
-              <Register />
-              // </PublicRoute>
+              <PublicRoute restricted>
+                <Register />
+              </PublicRoute>
             }
           />
 
           <Route
             path="/login"
             element={
-              // <PublicRoute restricted>
-              <Login />
-              // </PublicRoute>
+              <PublicRoute restricted>
+                <Login />
+              </PublicRoute>
             }
           />
-
-          {/* <PrivateRoute path="/contacts">
-            <Contacts />
-          </PrivateRoute> */}
 
           <Route
             path="/contacts"
             element={
-              // <PrivateRoute>
-              <Contacts />
-              // </PrivateRoute>
+              <PrivateRoute>
+                <Contacts />
+              </PrivateRoute>
             }
           />
           <Route path="*" element={<NotFound />} />

@@ -19,11 +19,13 @@ const authSlise = createSlice({
       state.token = action.payload.token;
       state.isLoggedIn = true;
     },
+
     [authOperations.logIn.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
     },
+
     [authOperations.logOut.fulfilled](state, action) {
       state.user = {
         name: null,
@@ -32,6 +34,7 @@ const authSlise = createSlice({
       state.token = null;
       state.isLoggedIn = false;
     },
+
     [authOperations.fetchCurrentUser.fulfilled](state, action) {
       // console.log(action);
       state.user = action.payload;
