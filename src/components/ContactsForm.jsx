@@ -1,12 +1,10 @@
 import s from '../Styles.module.css';
-// import { nanoid } from 'nanoid';
 
 import { useState } from 'react';
 import { useContacts } from './Hooks/hooks';
 import { infoToast, successToast } from './Toasts';
 
 export const ContacstForm = () => {
-  // const { contacts, isLoaging, addContact } = useContacts();
   const { contacts, addContact } = useContacts();
 
   const [name, setName] = useState('');
@@ -30,11 +28,6 @@ export const ContacstForm = () => {
   const handleSubmit = async event => {
     event.preventDefault();
 
-    // const contact = {
-    //   id: nanoid(),
-    //   name,
-    //   number,
-    // };
     const enterContacts = contacts.some(
       contact =>
         (contact.name === name.toLowerCase() && contact.number === number) ||

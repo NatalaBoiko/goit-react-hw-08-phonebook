@@ -8,7 +8,6 @@
 .user__container {
   display: flex;
   align-items: center;
-  /* background-image: {bg}; */
 }
 
 .view__container {
@@ -17,7 +16,6 @@
   display: flex;
   row-gap: 15px;
   flex-direction: column;
-  /* align-items: center; */
   padding: 100px var(--glob-padding);
   background-image: url(./components/images/img3.jpeg);
   background-position: center;
@@ -39,7 +37,6 @@
   row-gap: 15px;
   flex-direction: column;
   align-items: center;
-  /* padding: 20px 0; */
 }
 
 .cont__container {
@@ -47,7 +44,6 @@
   row-gap: 15px;
   flex-direction: column;
   align-items: center;
-  /* padding: 20px 0; */
 }
 
 .items__container {
@@ -68,7 +64,6 @@
   justify-content: space-between;
   padding: 30px var(--glob-padding);
   box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 75%);
-  /* 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); */
 }
 
 .nav__link {
@@ -76,7 +71,6 @@
   font-size: 25px;
   transition-duration: 800ms;
   color: var(--navlink__color);
-  /* margin-right: 10px; */
 }
 
 .nav__link:not(:last-child) {
@@ -97,7 +91,6 @@
 .user__name:hover,
 .active {
   margin-right: 20px;
-  /* font-size: 30px; */
   color: var(--navlink__hover);
   text-shadow: 0px 2px 1px rgb(107 84 102);
   font-weight: 800;
@@ -153,7 +146,6 @@
 .home__title {
   display: flex;
   justify-content: center;
-  /* font-size: 30px; */
   font-weight: 800;
   color: var(--secondary__color);
 }
@@ -164,7 +156,6 @@
   color: var(--secondary__light);
   font-size: 20px;
   font-weight: 700;
-  /* color: var(--secondary__color); */
 }
 
 input {
@@ -173,20 +164,17 @@ input {
   border-radius: 5px;
   box-shadow: var(--btn__shadow);
   color: var(--secondary__light);
-  /* border-bottom: 1px solid var(--secondary__color); */
   padding: 5px;
   transition: var(--transition__duration);
 }
 input:hover,
 input:focus {
   border: 1px solid var(--secondary__light);
-  /* width: 100%; */
   transform: scale(1.1);
 }
 
 .items {
   row-gap: 20px;
-  /* column-gap: 13px; */
   justify-content: flex-start;
   list-style: none;
 }
@@ -194,7 +182,6 @@ input:focus {
 .item {
   display: flex;
   height: 80px;
-  /* width: 250px; */
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #00000040;
