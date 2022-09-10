@@ -23,6 +23,7 @@ export const ContactsList = () => {
 
   const findContacts = () => {
     const normalizedFilter = filter.toLowerCase();
+
     if (contacts) {
       return contacts.filter(contact =>
         contact.name.toLowerCase().includes(normalizedFilter)
