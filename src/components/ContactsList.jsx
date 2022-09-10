@@ -7,7 +7,12 @@ import { useContacts } from './Hooks/hooks';
 import { contactsOperations } from '../redux/contacts/contactsOperations';
 import { deleteToast } from './Toasts';
 
+import { useSelector } from 'react-redux';
+import authSelectors from '../redux/auth/auth-selectors';
+
 export const ContactsList = () => {
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+
   const dispatch = useDispatch();
   const { contacts, isLoaging, filter, deleteContact, setFilter } =
     useContacts();
@@ -29,9 +34,8 @@ export const ContactsList = () => {
 
   return (
     <div>
-      {isLoaging ? (
-        <Loader />
-      ) : (
+      {isLoaging && <Loader />}
+      {isLoggedIn && (
         <ul className={s.items__container}>
           {contacts &&
             filteredContacts.map(({ id, name, number }) => {
