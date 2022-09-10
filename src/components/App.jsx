@@ -2,14 +2,11 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
-
 import { useDispatch } from 'react-redux';
-// import { useDispatch, useSelector } from 'react-redux';
-
+import authOperations from '../redux/auth/auth-operations';
 // import { PrivateRoute } from './Routs/PrivateRoute';
 // import { PublicRoute } from './Routs/PublicRoute';
-// import authSelectors from '../redux/auth/auth-selectors';
-import authOperations from '../redux/auth/auth-operations';
+
 import { Layout } from './Layout';
 
 const HomeView = lazy(() => import('../views/Home'));
@@ -26,7 +23,6 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    // !getCurrentUser && (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -70,6 +66,5 @@ export const App = () => {
       </Routes>
       <ToastContainer />
     </>
-    // )
   );
 };

@@ -33,6 +33,7 @@ const authSlise = createSlice({
       state.isLoggedIn = false;
     },
     [authOperations.fetchCurrentUser.fulfilled](state, action) {
+      // console.log(action);
       state.user = action.payload;
       state.isLoggedIn = true;
     },
